@@ -3,18 +3,21 @@
     "title": "Post 03",
     "description": "Learn how revenue increased using HTML5 ads.",
     "image": "https://picsum.photos/600/400?1",
-    "link": "post3.html"
+    "link": "post3.html",
+    "date": "2026-04-01"
   },
   {
     "title": "Cardgames.io Case Study",
     "description": "Learn how revenue increased using HTML5 ads.",
     "image": "https://picsum.photos/600/400?1",
-    "link": "post2.html"
+    "link": "post2.html",
+    "date": "2026-04-01"
   },
   {
     "title": "Gaming Monetization",
     "description": "Best strategies for earning from games.",
     "image": "https://picsum.photos/600/400?2",
-    "link": "post1.html"
+    "link": "post1.html",
+    "date": "2026-04-01"
   }
 ]
