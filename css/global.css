@@ -1,16 +1,63 @@
 :root {
+   /* --font-main: system-ui, -apple-system, Roboto, Arial, sans-serif; */  /*  THIS IS FOR SYSTEM FONTS */
+   --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
    --bg:#f8f9fb;
    --header: #ffffff ;
    --card:#ffffff;
    --border:#e5e7eb;
    --text:#000;
+
+   --backbtnBg: #eaeaea ;
+   --backbtnclr: #000 ;
+}
+@media (prefers-color-scheme: dark) {
+:root{
+   --bg: #16181d ;
+   --header: #22252b ;
+   --card: #22252b ;
+   --border:#2f3440;
+   --text: #fff ;
+   --backbtnBg: #171a20 ;
+   --backbtnclr: #fff ;
+ }
 }
 /******************* Base ****************/
 * {
-  margin: 0 ; padding:0; box-sizing: border-box; user-select:none;
+  margin: 0 ; padding:0; box-sizing: border-box; user-select:none; -webkit-tap-highlight-color: transparent;
 }
 body {
   background: var(--bg);
   font-family: system-ui;
 }
 a { text-decoration:none; color: var(--text); }
+button, a { touch-action: manipulation; }
+
+/*******************************************/
+header {
+  padding:10px 16px;
+  background:var(--header);
+  border-bottom:1px solid var(--border);
+  position: sticky; top: 0;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  height: 58px ;
+  max-height: 58px ;
+  animation: none !important;
+}
+.back-btn{
+  width:38px;
+  height:38px;
+  background: var(--backbtnBg);
+  color: var(--backbtnclr);
+  border: none;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+}
+
+
+
+
