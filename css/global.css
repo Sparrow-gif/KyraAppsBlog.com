@@ -1,1 +1,15 @@
-
+:root {
+   --bg: #f8f9fb ;
+   --text: #000 ;
+   --header: #ffffff;
+   --card: #ffffff;
+   --border:;
+}
+/******************* Base ****************/
+* {
+  margin: 0 ; padding:0; box-sizing: border-box; user-select:none;
+}
+body {
+  background: var(--bg);
+  font-family: system-ui;
+}
