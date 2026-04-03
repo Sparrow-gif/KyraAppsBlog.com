@@ -1,1 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QMath Blog Dashboard</title>
 
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#f8f9fb;
+  --card:#ffffff;
+  --border:#e5e7eb;
+  --text:#111827;
+  --muted:#6b7280;
+  --primary:#6366f1;
+}
+
+/* Layout */
+body {
+  background: var(--bg);
+  font-family: system-ui;
+}
+
+.topbar {
+  height:60px;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  padding:0 15px;
+}
+
+.sidebar {
+  width:240px;
+  background:#fff;
+  border-right:1px solid var(--border);
+  position:fixed;
+  top:60px;
+  bottom:0;
+  left:0;
+  padding:20px;
+}
+
+.content {
+  margin-top:60px;
+  margin-left:240px;
+  padding:20px;
+}
+
+/* Cards */
+.card-custom {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  transition:.3s;
+}
+.card-custom:hover {
+  transform:translateY(-5px);
+}
+
+.card-img {
+  height:180px;
+  background:#ddd;
+}
+
+.card-body h5 {
+  font-weight:600;
+}
+
+/* Skeleton */
+.skeleton {
+  animation: shimmer 1.5s infinite linear;
+  background: linear-gradient(90deg,#eee 25%,#ddd 50%,#eee 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {background-position:200% 0;}
+  100% {background-position:-200% 0;}
+}
+
+.skeleton-box {
+  height:180px;
+  border-radius:8px;
+}
+
+.skeleton-text {
+  height:15px;
+  margin:10px 0;
+  border-radius:4px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align:center;
+  padding:60px;
+  color:var(--muted);
+}
+
+/* Responsive */
+@media(max-width:991px){
+  .sidebar {
+    left:-260px;
+    transition:.3s;
+  }
+  .sidebar.active {
+    left:0;
+  }
+  .content {
+    margin-left:0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Topbar -->
+<header class="topbar">
+  <button class="btn btn-light d-lg-none" id="menuBtn">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <h6 class="ms-3 mb-0">Total Posts: <span id="totalPosts">0</span></h6>
+
+  <div class="ms-auto">
+    <i class="bi bi-person-circle fs-4"></i>
+  </div>
+</header>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+  <h5 class="mb-4">QMath</h5>
+  <ul class="nav flex-column">
+    <li class="nav-item mb-2"><a href="#" class="nav-link">🏠 Dashboard</a></li>
+    <li class="nav-item mb-2"><a href="#" class="nav-link">📝 Posts</a></li>
+    <li class="nav-item"><a href="#" class="nav-link">⚙ Settings</a></li>
+  </ul>
+</aside>
+
+<!-- Content -->
+<main class="content">
+
+  <div class="row" id="postsContainer">
+
+    <!-- Skeleton Loading -->
+    <script>
+      for(let i=0;i<6;i++){
+        document.write(`
+        <div class="col-md-4 mb-4">
+          <div class="card-custom p-3">
+            <div class="skeleton skeleton-box"></div>
+            <div class="skeleton skeleton-text w-75"></div>
+            <div class="skeleton skeleton-text w-100"></div>
+            <div class="skeleton skeleton-text w-50"></div>
+          </div>
+        </div>
+        `);
+      }
+    </script>
+
+  </div>
+
+</main>
+
+<script>
+
+// Sidebar toggle
+document.getElementById("menuBtn").onclick = () => {
+  document.getElementById("sidebar").classList.toggle("active");
+};
+
+// Fetch JSON
+fetch("data/stories.json")
+.then(res => res.json())
+.then(data => {
+
+  const container = document.getElementById("postsContainer");
+  container.innerHTML = "";
+
+  if(!data || data.length === 0){
+    container.innerHTML = `
+      <div class="empty-state">
+        <h4>No Posts Found</h4>
+        <p>Please add stories.json data</p>
+      </div>`;
+    return;
+  }
+
+  // Update total posts
+  document.getElementById("totalPosts").innerText = data.length;
+
+  data.forEach(post => {
+
+    const card = `
+    <div class="col-md-4 mb-4">
+      <div class="card-custom">
+        <div class="card-img" style="background:url('${post.image}') center/cover;"></div>
+        <div class="p-3">
+          <h5>${post.title}</h5>
+          <p class="text-muted">${post.description}</p>
+          <a href="${post.link}" class="btn btn-outline-primary btn-sm">Read Now →</a>
+        </div>
+      </div>
+    </div>
+    `;
+
+    container.innerHTML += card;
+  });
+
+})
+.catch(err => {
+  document.getElementById("postsContainer").innerHTML = `
+    <div class="empty-state">
+      <h4>Error Loading Data</h4>
+      <p>Check stories.json file</p>
+    </div>`;
+});
+
+</script>
+
+</body>
+</html>
