@@ -104,7 +104,7 @@
 <script>
 
 // Fetch posts
-fetch("data/tories.json")
+fetch("data/stories.json")
 .then(res => res.json())
 .then(data => {
 
@@ -120,15 +120,26 @@ fetch("data/tories.json")
     return;
   }
 
+  // 🔥 Sort latest first
+  data.sort((a,b) => new Date(b.date) - new Date(a.date));
+
   document.getElementById("totalPosts").innerText = data.length;
 
   data.forEach(post => {
+
+    const formattedDate = new Date(post.date).toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric"
+    });
+
     container.innerHTML += `
     <div class="col-md-4 mb-4">
       <div class="card-custom">
         <div class="card-img" style="background:url('${post.image}') center/cover;"></div>
         <div class="p-3">
-          <h5>${post.title}</h5>
+          <small class="text-muted">${formattedDate}</small>
+          <h5 class="mt-1">${post.title}</h5>
           <p class="text-muted">${post.description}</p>
           <a href="${post.link}" class="btn btn-outline-primary btn-sm">Read Now →</a>
         </div>
@@ -137,7 +148,7 @@ fetch("data/tories.json")
     `;
   });
 
-})
+})////////////////////////////////////////////////////////////
 .catch(() => {
   document.getElementById("postsContainer").innerHTML = `
     <div class="empty-state">
