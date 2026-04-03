@@ -12,27 +12,11 @@
 <link href="css/global.css" rel="stylesheet">
   
 <style>
-body {
-  background:#f8f9fb;
-  font-family:system-ui;
-}
-
-/* Topbar */
-.topbar {
-  height:60px;
-  background:#fff;
-  border-bottom:1px solid #eee;
-  display:flex;
-  align-items:center;
-  padding:0 15px;
-}
 
 /* Search Box */
 .search-box {
-  max-width:500px;
-  width:100%;
-  margin:auto;
-  position:relative;
+  max-width:420px; width: 80%;
+  margin:auto; position:relative;
 }
 
 .search-box input {
@@ -50,14 +34,9 @@ body {
 
 /* Cards */
 .card-custom {
-  background:#fff;
-  border:1px solid #eee;
-  border-radius:12px;
-  overflow:hidden;
-  transition:.3s;
-}
-.card-custom:hover {
-  transform:translateY(-5px);
+  background: var(--card);
+  border:1px solid var(--border); border-radius:12px;
+  overflow:hidden; transition:.3s;
 }
 
 .card-img {
@@ -78,7 +57,7 @@ body {
 
 <!-- HEADER -->
 <header class="header-section">
-  <button class="back-btn" role="button" aria-label="Go back" onclick="window.history.back();">
+  <button class="back-btn me-3" role="button" aria-label="Go back" onclick="window.history.back();">
     <i class="bi bi-arrow-left"></i>
   </button>
   <div class="search-box">
