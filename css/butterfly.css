@@ -11,20 +11,16 @@
 }
 /**************** Desktop Sidebar ****************/
 .sidebar {
-  width:240px;
-  background:#fff;
+  width:280px;
+  background: var(--header);
   border-right:1px solid var(--border);
-  position:fixed;
-  top:60px;
-  bottom:0;
-  left:0;
-  padding:20px;
+  position:fixed; top:60px; bottom:0; left:0; padding:20px;
 }
 
 /***************** Content *****************/
 .content {
   margin-top:30px;
-  margin-left:240px;
+  margin-left:280px;
   padding:20px;
 }
 
