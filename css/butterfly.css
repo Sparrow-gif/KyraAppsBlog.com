@@ -22,13 +22,9 @@
 }
 /* Sidebar Menu */
 .sidebar-menu .nav-link {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:10px 12px;
-  border-radius:10px;
-  color:#374151;
-  font-weight:500;
+  display:flex;  border: 1px solid var(--border) ;
+  align-items:center; gap:10px; padding:10px 12px;
+  border-radius:10px; font-weight:500;
   transition:all 0.25s ease;
 }
 
@@ -40,15 +36,11 @@
 
 /* Hover Effect 🔥 */
 .sidebar-menu .nav-link:hover {
-  background:rgba(99,102,241,0.08);
-  color:#6366f1;
-  transform:translateX(4px);
+  background:rgba(99,102,241,0.08); color:#6366f1; transform:translateX(4px);
 }
 
 /* Hover icon animation */
-.sidebar-menu .nav-link:hover i {
-  transform:scale(1.2);
-}
+.sidebar-menu .nav-link:hover i { transform:scale(1.2); }
 
 /***************** Content *****************/
 .post-grid {
