@@ -1,9 +1,9 @@
 :root {
-   --bg: #f8f9fb ;
-   --text: #000 ;
-   --header: #ffffff;
-   --card: #ffffff;
-   --border:;
+   --bg:#f8f9fb;
+   --header: #ffffff ;
+   --card:#ffffff;
+   --border:#e5e7eb;
+   --text:#000;
 }
 /******************* Base ****************/
 * {
