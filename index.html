@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>QMath Blog Dashboard</title>
+<title>QMath Dashboard</title>
 
 <!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -21,12 +21,13 @@
   --primary:#6366f1;
 }
 
-/* Layout */
+/* Base */
 body {
   background: var(--bg);
   font-family: system-ui;
 }
 
+/* Topbar */
 .topbar {
   height:60px;
   background:#fff;
@@ -41,6 +42,7 @@ body {
   padding:0 15px;
 }
 
+/* Desktop Sidebar */
 .sidebar {
   width:240px;
   background:#fff;
@@ -52,6 +54,7 @@ body {
   padding:20px;
 }
 
+/* Content */
 .content {
   margin-top:60px;
   margin-left:240px;
@@ -73,10 +76,6 @@ body {
 .card-img {
   height:180px;
   background:#ddd;
-}
-
-.card-body h5 {
-  font-weight:600;
 }
 
 /* Skeleton */
@@ -109,14 +108,19 @@ body {
   color:var(--muted);
 }
 
+/* Offcanvas */
+.offcanvas {
+  width:260px;
+}
+
+.offcanvas-body .nav-link {
+  font-weight:500;
+}
+
 /* Responsive */
 @media(max-width:991px){
   .sidebar {
-    left:-260px;
-    transition:.3s;
-  }
-  .sidebar.active {
-    left:0;
+    display:none;
   }
   .content {
     margin-left:0;
@@ -127,35 +131,70 @@ body {
 
 <body>
 
-<!-- Topbar -->
+<!-- 🔝 Topbar -->
 <header class="topbar">
-  <button class="btn btn-light d-lg-none" id="menuBtn">
+  <button class="btn btn-light d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
     <i class="bi bi-list"></i>
   </button>
 
   <h6 class="ms-3 mb-0">Total Posts: <span id="totalPosts">0</span></h6>
 
   <div class="ms-auto">
+    <i class="bi bi-envelope me-3"></i>
     <i class="bi bi-person-circle fs-4"></i>
   </div>
 </header>
 
-<!-- Sidebar -->
-<aside class="sidebar" id="sidebar">
-  <h5 class="mb-4">QMath</h5>
+<!-- 🖥 Desktop Sidebar -->
+<aside class="sidebar d-none d-lg-block">
+  <h5 class="mb-4">MEASURE</h5>
+
   <ul class="nav flex-column">
-    <li class="nav-item mb-2"><a href="#" class="nav-link">🏠 Dashboard</a></li>
-    <li class="nav-item mb-2"><a href="#" class="nav-link">📝 Posts</a></li>
-    <li class="nav-item"><a href="#" class="nav-link">⚙ Settings</a></li>
+    <li class="nav-item mb-2">
+      <a href="#" class="nav-link d-flex justify-content-between align-items-center">
+        Jobs <span class="badge bg-dark">3</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a href="#" class="nav-link">Wallet</a>
+    </li>
   </ul>
+
+  <p class="text-muted mt-4">How do we use your activity?</p>
 </aside>
 
-<!-- Content -->
-<main class="content">
+<!-- 📱 Mobile Offcanvas Sidebar -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileSidebar">
 
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">MEASURE</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+
+  <div class="offcanvas-body">
+
+    <ul class="nav flex-column">
+      <li class="nav-item mb-3">
+        <a href="#" class="nav-link d-flex justify-content-between align-items-center">
+          Jobs <span class="badge bg-dark">3</span>
+        </a>
+      </li>
+
+      <li class="nav-item mb-3">
+        <a href="#" class="nav-link">Wallet</a>
+      </li>
+    </ul>
+
+    <p class="text-muted mt-4">How do we use your activity?</p>
+
+  </div>
+</div>
+
+<!-- 📦 Content -->
+<main class="content">
   <div class="row" id="postsContainer">
 
-    <!-- Skeleton Loading -->
+    <!-- Skeleton -->
     <script>
       for(let i=0;i<6;i++){
         document.write(`
@@ -172,17 +211,14 @@ body {
     </script>
 
   </div>
-
 </main>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
 
-// Sidebar toggle
-document.getElementById("menuBtn").onclick = () => {
-  document.getElementById("sidebar").classList.toggle("active");
-};
-
-// Fetch JSON
+// Fetch posts
 fetch("data/stories.json")
 .then(res => res.json())
 .then(data => {
@@ -199,12 +235,10 @@ fetch("data/stories.json")
     return;
   }
 
-  // Update total posts
   document.getElementById("totalPosts").innerText = data.length;
 
   data.forEach(post => {
-
-    const card = `
+    container.innerHTML += `
     <div class="col-md-4 mb-4">
       <div class="card-custom">
         <div class="card-img" style="background:url('${post.image}') center/cover;"></div>
@@ -216,12 +250,10 @@ fetch("data/stories.json")
       </div>
     </div>
     `;
-
-    container.innerHTML += card;
   });
 
 })
-.catch(err => {
+.catch(() => {
   document.getElementById("postsContainer").innerHTML = `
     <div class="empty-state">
       <h4>Error Loading Data</h4>
