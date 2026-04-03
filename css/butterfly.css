@@ -32,7 +32,7 @@ body {
   padding:0 15px;
 }
 .header-icon .bi {
-   font-size: 16px; border: 1px solid var(--border) ; border-radius:50%; background: var(--bg);
+   font-size: 16px; border: 1px solid var(--border) ; border-radius:50%; background: var(--bg); padding: 6px;
 }
 /**************** Desktop Sidebar ****************/
 .sidebar {
@@ -61,10 +61,6 @@ body {
   overflow:hidden;
   transition:.3s;
 }
-.card-custom:hover {
-  transform:translateY(-5px);
-}
-
 .card-img {
   height:180px;
   background:#ddd;
@@ -102,7 +98,7 @@ body {
 
 /**************** Offcanvas *****************/
 .offcanvas {
-  width:260px;
+  width: 70%;
 }
 
 .offcanvas-body .nav-link {
@@ -118,5 +114,5 @@ body {
     margin-left:0;
   }
 }
-
+/************************************************************/
 
