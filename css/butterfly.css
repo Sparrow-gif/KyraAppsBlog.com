@@ -1,1 +1,116 @@
+:root {
+  --bg:#f8f9fb;
+  --card:#ffffff;
+  --border:#e5e7eb;
+  --text:#111827;
+  --muted:#6b7280;
+  --primary:#6366f1;
+}
+
+/* Base */
+body {
+  background: var(--bg);
+  font-family: system-ui;
+}
+
+/* Topbar */
+.topbar {
+  height:60px;
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  padding:0 15px;
+}
+
+/* Desktop Sidebar */
+.sidebar {
+  width:240px;
+  background:#fff;
+  border-right:1px solid var(--border);
+  position:fixed;
+  top:60px;
+  bottom:0;
+  left:0;
+  padding:20px;
+}
+
+/* Content */
+.content {
+  margin-top:60px;
+  margin-left:240px;
+  padding:20px;
+}
+
+/* Cards */
+.card-custom {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+  transition:.3s;
+}
+.card-custom:hover {
+  transform:translateY(-5px);
+}
+
+.card-img {
+  height:180px;
+  background:#ddd;
+}
+
+/* Skeleton */
+.skeleton {
+  animation: shimmer 1.5s infinite linear;
+  background: linear-gradient(90deg,#eee 25%,#ddd 50%,#eee 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  0% {background-position:200% 0;}
+  100% {background-position:-200% 0;}
+}
+
+.skeleton-box {
+  height:180px;
+  border-radius:8px;
+}
+
+.skeleton-text {
+  height:15px;
+  margin:10px 0;
+  border-radius:4px;
+}
+
+/* Empty State */
+.empty-state {
+  text-align:center;
+  padding:60px;
+  color:var(--muted);
+}
+
+/* Offcanvas */
+.offcanvas {
+  width:260px;
+}
+
+.offcanvas-body .nav-link {
+  font-weight:500;
+}
+
+/* Responsive */
+@media(max-width:991px){
+  .sidebar {
+    display:none;
+  }
+  .content {
+    margin-left:0;
+  }
+}
+
 
