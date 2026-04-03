@@ -141,8 +141,9 @@ fetch("data/tories.json")
 .catch(() => {
   document.getElementById("postsContainer").innerHTML = `
     <div class="empty-state">
-      <h4>Error Loading Data</h4>
-      <p>Check stories.json file</p>
+      <img src="" class="error-img" loading="lazy" draggable="false" alt="Girl in a jacket" width="80" height="80">
+      <h4> Error Loading Data </h4>
+      <p> please try again sometimes leter. </p>
     </div>`;
 });
 
