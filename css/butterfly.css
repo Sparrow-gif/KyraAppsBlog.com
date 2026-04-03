@@ -32,7 +32,7 @@ body {
   padding:0 15px;
 }
 .header-icon .bi {
-   
+   font-size: 16px; border: 1px solid var(--border) ; border-radius:50%; background: var(--bg);
 }
 /**************** Desktop Sidebar ****************/
 .sidebar {
