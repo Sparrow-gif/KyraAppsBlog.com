@@ -111,6 +111,14 @@ fetch("data/stories.json")
 
   // 🔥 Sort latest first
   data.sort((a,b) => new Date(b.date) - new Date(a.date));
+  function timeAgo(date){
+  const diff = (new Date() - new Date(date)) / 1000;
+  const days = Math.floor(diff / 86400);
+
+  if(days < 1) return "Today";
+  if(days === 1) return "Yesterday";
+  return days + " days ago";
+}
 
   document.getElementById("totalPosts").innerText = data.length;
 
@@ -127,7 +135,7 @@ fetch("data/stories.json")
       <div class="card-custom">
         <div class="card-img" style="background:url('${post.image}') center/cover;"></div>
         <div class="p-3">
-          <small class="text-muted">${formattedDate}</small>
+          <small class="text-muted">${timeAgo(post.date)}</small>
           <h5 class="mt-1">${post.title}</h5>
           <p class="text-muted">${post.description}</p>
           <a href="${post.link}" class="btn btn-outline-primary btn-sm">Read Now →</a>
