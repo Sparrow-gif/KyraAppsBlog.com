@@ -7,13 +7,13 @@
   --primary:#6366f1;
 }
 
-/* Base */
+/******************* Base ****************/
 body {
   background: var(--bg);
   font-family: system-ui;
 }
 
-/* Topbar */
+/**************** Topbar *************/
 .topbar {
   height:60px;
   background:#fff;
@@ -28,7 +28,7 @@ body {
   padding:0 15px;
 }
 
-/* Desktop Sidebar */
+/**************** Desktop Sidebar ****************/
 .sidebar {
   width:240px;
   background:#fff;
@@ -40,14 +40,14 @@ body {
   padding:20px;
 }
 
-/* Content */
+/***************** Content *****************/
 .content {
   margin-top:60px;
   margin-left:240px;
   padding:20px;
 }
 
-/* Cards */
+/*********** Cards *************/
 .card-custom {
   background:var(--card);
   border:1px solid var(--border);
@@ -64,7 +64,7 @@ body {
   background:#ddd;
 }
 
-/* Skeleton */
+/***************** Skeleton *****************/
 .skeleton {
   animation: shimmer 1.5s infinite linear;
   background: linear-gradient(90deg,#eee 25%,#ddd 50%,#eee 75%);
@@ -87,14 +87,14 @@ body {
   border-radius:4px;
 }
 
-/* Empty State */
+/*********************** Empty State *******************/
 .empty-state {
   text-align:center;
   padding:60px;
   color:var(--muted);
 }
 
-/* Offcanvas */
+/**************** Offcanvas *****************/
 .offcanvas {
   width:260px;
 }
@@ -103,7 +103,7 @@ body {
   font-weight:500;
 }
 
-/* Responsive */
+/************************* Responsive **********************/
 @media(max-width:991px){
   .sidebar {
     display:none;
