@@ -43,17 +43,11 @@
 
 /*********** Cards *************/
 .card-custom {
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:12px;
-  overflow:hidden;
-  transition:.3s;
+  background:var(--card); border:1px solid var(--border);
+  border-radius:12px; overflow:hidden; transition:.3s; 
 }
-.card-img {
-  height:180px;
-  background:#ddd;
-}
-.card-custom btn { background: var(--read-btn); }
+.card-img { height:180px; background:#ddd; }
+.card-custom .btn { background: var(--read-btn); }
 
 /***************** Skeleton *****************/
 .skeleton {
