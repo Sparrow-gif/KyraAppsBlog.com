@@ -34,16 +34,11 @@ button, a { touch-action: manipulation; }
 
 /*******************************************/
 header {
-  padding:10px 16px;
-  background:var(--header);
+  padding:10px 16px; background:var(--header);
   border-bottom:1px solid var(--border);
-  position: sticky; top: 0;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  height: 58px ;
-  max-height: 58px ;
-  animation: none !important;
+  position: sticky; top: 0;  display:flex;
+  align-items:center;  gap:10px;
+  height: 58px ; max-height: 58px ;
 }
 .back-btn{
   width:38px;
