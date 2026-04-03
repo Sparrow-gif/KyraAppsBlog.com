@@ -8,15 +8,6 @@
   --primary:#6366f1;
 }
 
-/******************* Base ****************/
-* {
-  margin: 0 ; padding:0; box-sizing: border-box; user-select:none;
-}
-body {
-  background: var(--bg);
-  font-family: system-ui;
-}
-
 /**************** Topbar *************/
 .topbar {
   height:60px; max-height:60px;
