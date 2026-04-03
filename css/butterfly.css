@@ -18,6 +18,10 @@
 }
 
 /***************** Content *****************/
+.post-grid {
+  display: grid;
+  gap: 20px;
+}
 .content {
   margin-top:30px;
   margin-left:280px;
@@ -78,6 +82,23 @@
   }
   .content {
     margin-left:0;
+  }
+}
+@media (max-width: 575px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .post-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .post-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 /************************************************************/
