@@ -98,12 +98,10 @@ footer ul li a { color: var(--footer-text); }
   width: 40px; height: 40px; border-radius: 50%; color: #fff;
   font-size: 18px; transition: 0.3s; }
 
+/* Facebook */.social-icons li:nth-child(1) a { background: #1877f2; }
 /* WhatsApp */ .social-icons li:nth-child(2) a { background: #25d366; }
-
 /* Pinterest */ .social-icons li:nth-child(3) a { background: #e60023; }
-
 /* Instagram */ .social-icons li:nth-child(4) a {background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);}
-
 /* Telegram */ .social-icons li:nth-child(5) a { background: #0088cc; }
 
 .social-icons li a:hover {
