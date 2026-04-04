@@ -41,6 +41,7 @@
   <div class="ms-auto header-icon">
     <a onclick="window.location.href='notifications/notifications.html';" class="bi bi-bell me-2"></a>
     <a onclick="window.location.href='search.html';" class="bi bi-search"></a>
+    <button id="installBtn" style="display:none;"> Install App </button>
   </div>
 </header>
 
@@ -111,6 +112,26 @@
   navigator.serviceWorker.register('/KyraAppsBlog.com/sw.js')
     .then(() => console.log('SW Registered'));
 }
+</script>
+ <script>
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+
+  // Button show karo
+  document.getElementById("installBtn").style.display = "block";
+});
+
+document.getElementById("installBtn").addEventListener("click", () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(() => {
+      deferredPrompt = null;
+    });
+  }
+});
 </script>
 
 <script>
