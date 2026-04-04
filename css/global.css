@@ -69,6 +69,20 @@ footer {
    color: var(--footer-text);
 }
 footer ul li a { color: var(--footer-text); }
+
+.social-icons li a {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%; color: #fff;
+  font-size: 18px; transition: 0.3s; }
+
+/* WhatsApp */ .social-icons li:nth-child(2) a { background: #25d366; }
+
+/* Pinterest */ .social-icons li:nth-child(3) a { background: #e60023; }
+
+/* Instagram */ .social-icons li:nth-child(4) a {background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);}
+
+/* Telegram */ .social-icons li:nth-child(5) a { background: #0088cc; }
+
 /********************** text truncate **************************/
 .truncate {
       overflow: hidden;
