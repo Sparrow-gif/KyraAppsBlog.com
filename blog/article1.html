@@ -99,6 +99,24 @@
 
   function loadPostData(){
 
+    // ✅ Dynamic Meta Tags
+document.title = post.title;
+
+let metaDesc = document.querySelector("meta[name='description']");
+if(!metaDesc){
+  metaDesc = document.createElement("meta");
+  metaDesc.name = "description";
+  document.head.appendChild(metaDesc);
+}
+metaDesc.content = post.description;
+
+// 🔥 Init Social Share (delay for DOM load)
+setTimeout(() => {
+  if(typeof initSocialShare === "function"){
+    initSocialShare(post);
+  }
+}, 300);  ///////////////
+
     fetch("../data/stories.json")
       .then(res => res.json())
       .then(data => {
