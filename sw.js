@@ -1,7 +1,7 @@
 const CACHE_NAME = "qmath-cache-v1";
 
 const urlsToCache = [
-  "/",
+  "/KyraAppsBlog.com",
   "/KyraAppsBlog.com/index.html",
   "/KyraAppsBlog.com/css/butterfly.css",
   "/KyraAppsBlog.com/JS/main.js",
