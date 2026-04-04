@@ -5,7 +5,7 @@ const urlsToCache = [
   "/KyraAppsBlog.com/index.html",
   "/KyraAppsBlog.com/css/butterfly.css",
   "/KyraAppsBlog.com/JS/main.js",
-  "/KyraAppsBlog.com/assets/favicon.png"
+  "/assets/favicon.png"
 ];
 
 // Install → cache files
