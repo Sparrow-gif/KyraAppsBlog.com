@@ -83,6 +83,11 @@ footer ul li a { color: var(--footer-text); }
 
 /* Telegram */ .social-icons li:nth-child(5) a { background: #0088cc; }
 
+.social-icons li a:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
 /********************** text truncate **************************/
 .truncate {
       overflow: hidden;
