@@ -38,3 +38,7 @@
     #related-posts a:hover {
       transform: translateX(5px);
     }
+   .related {
+      border-bottom: 1px solid red ;
+      display: inline; background: #1877f2;
+   }
