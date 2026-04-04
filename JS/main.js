@@ -29,6 +29,13 @@ fetch("../components/social-share.html")
     document.getElementById("social-share").innerHTML = data;
   });
 
+/* FAQ Component Load */
+fetch("../components/faq.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("faq-section").innerHTML = data;
+  });
+
 // Sidebar → then load post data
 fetch("../components/sidebar.html")
   .then(res => res.text())
@@ -106,6 +113,41 @@ function loadPostData(){
       // ===============================
       if(typeof initSocialShare === "function"){
         initSocialShare(post);
+      }
+
+      /* =========================
+         🔥 FAQ DYNAMIC LOAD
+        ========================== */
+
+      if(post.faqs && document.getElementById("faq-container")){
+
+        let faqHTML = "";
+
+        post.faqs.forEach((faq, index) => {
+
+          faqHTML += `
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button ${index !== 0 ? 'collapsed' : ''}" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#faq${index}">
+                ${faq.q}
+              </button>
+            </h2>
+
+            <div id="faq${index}" 
+                 class="accordion-collapse collapse ${index === 0 ? 'show' : ''}" 
+                 data-bs-parent="#faq-container">
+              <div class="accordion-body">
+                ${faq.a}
+              </div>
+            </div>
+          </div>
+          `;
+        });
+
+        document.getElementById("faq-container").innerHTML = faqHTML;
       }
 
 
