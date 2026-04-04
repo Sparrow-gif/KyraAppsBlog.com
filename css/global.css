@@ -27,7 +27,7 @@
 }
 /******************* Base ****************/
 * {
-  margin: 0 ; padding:0; box-sizing: border-box; user-select:none; -webkit-tap-highlight-color: transparent;
+  margin: 0 ; padding:0; box-sizing: border-box; user-select:noe; -webkit-tap-highlight-color: transparent;
 }
 body {
   background: var(--bg);
