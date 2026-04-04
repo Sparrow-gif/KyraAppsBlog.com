@@ -3,7 +3,7 @@
 }
 /*******************************************/
 
-img {
+.feature-img {
    border-radius: 14px; width: 90%;
    margin: 20px auto;
 }
