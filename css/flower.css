@@ -2,7 +2,13 @@
   
 }
 /*******************************************/
-/* 🔥 Related Post Hover */
+
+img {
+   border-radius: 14px; width: 90%;
+   margin: 20px auto;
+}
+
+/***************** 🔥 Related Post Hover *******************/
     #related-posts a {
       display: block;
       transition: 0.3s;
