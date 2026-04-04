@@ -1,4 +1,4 @@
-<script>
+
 const currentPage = window.location.pathname.split("/").pop();
 
 /* 🔥 Load Header */
@@ -94,4 +94,4 @@ function loadPostData(){
 
     });
 }
-</script>
+
