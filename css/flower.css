@@ -8,6 +8,34 @@
    margin: 20px auto; aspect-ratio: 3:2 ;
 }
 
+/******************* social icons ***************************/
+
+.social-icons .share-btn {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0; /* 🔥 sharp edges */
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* 🎯 nth-child colors */
+.social-icons .share-btn:nth-child(1) { background: #1877f2; } /* Facebook */
+.social-icons .share-btn:nth-child(2) { background: #000000; } /* Twitter X */
+.social-icons .share-btn:nth-child(3) { background: #25d366; } /* WhatsApp */
+.social-icons .share-btn:nth-child(4) { background: #0a66c2; } /* LinkedIn */
+.social-icons .share-btn:nth-child(5) { background: #6c757d; } /* Copy */
+
+/* ✨ Hover Effects */
+.social-icons .share-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  opacity: 0.9;
+}
+
 /***************** 🔥 Related Post Hover *******************/
     #related-posts a {
       display: block;
