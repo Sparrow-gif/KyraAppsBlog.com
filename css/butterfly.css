@@ -11,29 +11,19 @@
 /**************** Topbar *************/
 .header-icon a {
    font-size: 16px; border: 1px solid var(--border) ; border-radius:50%; background: var(--bg); padding: 6px 8px; 
-   text-decoration:none; height: 24px; width: 24px;
+   text-decoration:none; height: 24px; width: 24px;  cursor: pointer;
 }
 .menu-btn {
-  font-size: 26px;           /* icon size increase */
-  color: #6f63ff;            /* icon color */
-  background: #f4f3ff;       /* light background */
+  font-size: 26px;      
   border: none;
-  border-radius: 10px;
-  padding: 6px 10px;
   transition: 0.3s;
 }
-
 /* Hover effect */
-.menu-btn:hover {
-  background: #6f63ff;
-  color: #fff;
-}
+.menu-btn:hover {   }
 
 /* Click (focus) border remove */
-.menu-btn:focus {
-  box-shadow: none;
-  outline: none;
-}
+.menu-btn:focus { box-shadow: none; outline: none; }
+
 /**************** Desktop Sidebar ****************/
 .sidebar {
   width:280px;
