@@ -54,7 +54,9 @@ fetch("../data/stories.json")
   .then(data => {
 
     const post = data.find(item => item.link.includes(currentPage));
-
+    const date = new Date(post.date).toDateString();
+    document.getElementById("post-date").innerText = date;
+    
     if(post){
 
       document.getElementById("post-title").innerText = post.title;
