@@ -5,7 +5,7 @@
 
 .feature-img {
    border-radius: 14px; width: 70%;
-   margin: 20px auto; aspect-ratio: 3:2 ;
+   margin: 0 auto; aspect-ratio: 3:1 ;
 }
 
 /******************* social icons ***************************/
