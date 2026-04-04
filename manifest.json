@@ -1,18 +1,18 @@
 {
-  "name": "KyraApps",
-  "short_name": "Kyra",
+  "name": "Kyra Apps Blog",
+  "short_name": "KyraBlog",
   "start_url": "/KyraAppsBlog.com/index.html",
   "display": "standalone",
-  "background_color": "#121212",
-  "theme_color": "#6f63ff",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
   "icons": [
     {
-      "src": "KyraAppsBlog.com/assets/favicon.png",
+      "src": "/KyraAppsBlog.com/assets/favicon.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "KyraAppsBlog.com/assets/favicon.png",
+      "src": "/KyraAppsBlog.com/assets/favicon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
