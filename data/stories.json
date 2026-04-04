@@ -4,28 +4,36 @@
     "description": "Learn how revenue increased using HTML5 ads.",
     "image": "https://picsum.photos/600/400?1",
     "link": "post6.html",
-    "date": "2026-04-01"
+    "date": "2026-04-01",
+    "author": "QMath Team",
+    "tags": ["gaming", "case-study", "monetization"]
   },
   {
     "title": "Post 05",
     "description": "Learn how revenue increased using HTML5 ads.",
     "image": "https://picsum.photos/600/400?1",
     "link": "post5.html",
-    "date": "2026-04-01"
+    "date": "2026-04-01",
+    "author": "QMath Team",
+    "tags": ["gaming", "case-study", "monetization"]
   },
   {
     "title": "Post 04",
     "description": "Learn how revenue increased using HTML5 ads.",
     "image": "https://picsum.photos/600/400?1",
     "link": "post4.html",
-    "date": "2026-04-01"
+    "date": "2026-04-01",
+    "author": "QMath Team",
+    "tags": ["gaming", "case-study", "monetization"]
   },
   {
     "title": "Post 03",
     "description": "Learn how revenue increased using HTML5 ads.",
     "image": "https://picsum.photos/600/400?1",
     "link": "post3.html",
-    "date": "2026-04-01"
+    "date": "2026-04-01",
+    "author": "QMath Team",
+    "tags": ["gaming", "case-study", "monetization"]
   },
   {
     "title": "Cardgames.io Case Study",
