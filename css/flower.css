@@ -16,7 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0; /* 🔥 sharp edges */
+  border-radius: 50%;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
