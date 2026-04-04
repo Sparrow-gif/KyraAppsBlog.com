@@ -33,6 +33,16 @@
     "link": "blog/article1.html",
     "date": "2026-04-01",
     "author": "QMath Editorial",
-    "tags": ["gaming", "ads", "earning"]
+    "tags": ["gaming", "ads", "earning"],
+    "faqs": [
+      {
+        "q": "Gaming se paise kaise kamaye?",
+        "a": "Ads, sponsorship aur in-app purchases se earning hoti hai."
+      },
+      {
+        "q": "Best monetization strategy kya hai?",
+        "a": "Combination of ads + premium model best hota hai."
+      }
+    ]
   }
 ]
