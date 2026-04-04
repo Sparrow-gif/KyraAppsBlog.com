@@ -1,29 +1,7 @@
-const CACHE_NAME = "qmath-cache-v1";
-
-const urlsToCache = [
-  "/KyraAppsBlog.com",
-  "/KyraAppsBlog.com/index.html",
-  "/KyraAppsBlog.com/css/butterfly.css",
-  "/KyraAppsBlog.com/JS/main.js",
-  "/assets/favicon.png"
-];
-
-// Install → cache files
-self.addEventListener("install", event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        return cache.addAll(urlsToCache);
-      })
-  );
+self.addEventListener('install', e => {
+  console.log('Service Worker Installed');
 });
 
-// Fetch → serve from cache
-self.addEventListener("fetch", event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        return response || fetch(event.request);
-      })
-  );
+self.addEventListener('fetch', e => {
+  e.respondWith(fetch(e.request));
 });
