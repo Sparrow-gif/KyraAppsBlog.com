@@ -10,29 +10,42 @@
 
 <body>
 
-  <!-- Header Load -->
+  <!--------------------------------------------------------------------
+   ------------------------------ Header Load -------------------------
+   -------------------------------------------------------------------->
   <div id="header"></div>
 
 <main class="container py-5">
 
-  <!-- Dynamic Data -->
-  <h1 id="post-title"></h1>
+  <div class="row">
 
-  <div class="d-flex gap-3 text-muted mb-3">
-    <span id="post-author"></span>
-    <span id="post-date"></span>
+  <!-- Main Content -->
+  <div class="col-lg-8">
+    <h1 id="post-title"></h1>
+    <div class="text-muted mb-3">
+      <span id="post-author"></span> | 
+      <span id="post-date"></span>
+    </div>
+
+    <img id="post-image" class="img-fluid mb-4">
+
+    <article>
+      <p>Manual content yaha rahega...</p>
+    </article>
   </div>
 
-  <img id="post-image" class="img-fluid rounded mb-4" />
+  <!-- Sidebar -->
+  <div class="col-lg-4">
+    <div id="sidebar"></div>
+  </div>
 
-  <!-- Manual Content -->
-  <article>
-    <p>Yaha tum apna manually likha hua content daaloge...</p>
-  </article>
+</div>
 
 </main>
 
-<!-- Footer Load -->
+<!--------------------------------------------------------------------
+  ------------------------------ Footer Load -------------------------
+  -------------------------------------------------------------------->
 <div id="footer"></div>
 
 <script>
