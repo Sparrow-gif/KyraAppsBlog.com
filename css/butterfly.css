@@ -21,7 +21,7 @@
   position:fixed; top:60px; bottom:0; left:0; padding:20px;
 }
 /* Sidebar Menu */
-.sidebar-menu .nav-link {
+.offcanvas-body .nav-link {
   display:flex;  border: 1px solid var(--border) ;
   align-items:center; gap:10px; padding:10px 12px;
   border-radius:10px; font-weight:500;
@@ -29,13 +29,13 @@
 }
 
 /* Icon style */
-.sidebar-menu .nav-link i {
+.offcanvas-body .nav-link i {
   font-size:18px;
   transition:0.2s;
 }
 
 /* Hover Effect 🔥 */
-.sidebar-menu .nav-link:hover {
+.offcanvas-body .nav-link:hover {
   background:rgba(99,102,241,0.08); color:#6366f1; transform:translateX(4px);
 }
 
