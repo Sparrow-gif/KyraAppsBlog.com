@@ -3,6 +3,8 @@
    --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
    --bg:#fff;
    --header: #FFFFFF ;
+   --footer: #576A8F ;
+   --footer-text: #fff ; 
    --card:#ffffff;
    --border:#e5e7eb;
    --text:#000;
@@ -14,6 +16,8 @@
 :root{
    --bg: #16181d ;
    --header: #22252b ;
+   --footer: #22252b ;
+   --footer-text: #fff ; 
    --card: #22252b ;
    --border:#2f3440;
    --text: #fff ;
@@ -59,6 +63,10 @@ header {
   align-items:center;
   justify-content:center;
   text-decoration:none;
+}
+footer {
+   border-top:1px solid var(--border); background:var(--footer);
+   color: var(--footer-text);
 }
 /********************** text truncate **************************/
 .truncate {
