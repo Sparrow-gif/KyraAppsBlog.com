@@ -142,7 +142,7 @@ function loadPostData(){
                    class="rounded me-2"
                    style="object-fit:cover;">
               <div>
-                <h6 class="mb-1">${item.title}</h6>
+                <h6 class="truncate mb-1">${item.title}</h6>
                 <small class="text-muted">${date}</small>
               </div>
             </div>
