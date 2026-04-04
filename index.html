@@ -39,18 +39,24 @@
 <body>
 
 <!-- 🔝 Topbar -->
-<header class="topbar">
-  <button class="btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
-    <i class="bi bi-list"></i>
-  </button>
+<header class="topbar d-flex justify-content-between align-items-center px-2">
 
-  <h6 class="me-2 mb-0">Total Posts: <span id="totalPosts">0</span></h6>
+  <!-- LEFT SIDE -->
+  <div class="d-flex align-items-center gap-2">
+    <button class="btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileSidebar">
+      <i class="bi bi-list"></i>
+    </button>
 
-  <div class="header-icon">
-    <a onclick="window.location.href='notifications/notifications.html';" class="bi bi-bell me-2"></a>
-    <a onclick="window.location.href='search.html';" class="bi bi-search"></a>
-    <a id="installBtn" style="display:none;" class="bi bi-file-arrow-down"> </a>
+    <h6 class="mb-0">Total Posts: <span id="totalPosts">0</span></h6>
   </div>
+
+  <!-- RIGHT SIDE -->
+  <div class="header-icon d-flex align-items-center gap-3">
+    <a onclick="window.location.href='notifications/notifications.html';" class="bi bi-bell"></a>
+    <a onclick="window.location.href='search.html';" class="bi bi-search"></a>
+    <a id="installBtn" style="display:block;" class="bi bi-file-arrow-down"></a>
+  </div>
+
 </header>
 
 <!-----------------------------------------------------------------
