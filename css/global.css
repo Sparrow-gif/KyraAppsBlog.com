@@ -96,8 +96,8 @@ footer ul li a { color: var(--footer-text); }
 
 .social-icons li a {
   display: inline-flex; align-items: center; justify-content: center;
-  width: 40px; height: 40px; border-radius: 50%; color: #fff;
-  font-size: 18px; transition: 0.3s; }
+  width: 35px; height: 35px; border-radius: 50%; color: #fff;
+  font-size: 16px; transition: 0.3s; }
 
 /* Facebook */.social-icons li:nth-child(1) a { background: #1877f2; }
 /* WhatsApp */ .social-icons li:nth-child(2) a { background: #25d366; }
