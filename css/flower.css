@@ -4,7 +4,7 @@
 /*******************************************/
 
 .feature-img {
-   border-radius: 14px; width: 70%;
+   border-radius: 14px; width: 100%;
    margin: 0 auto; aspect-ratio: 3:1 ;
 }
 
