@@ -35,9 +35,8 @@ function loadPostData(){
       }
 
       // ✅ Date format fix
-     // const formattedDate = new Date(post.date).toDateString();
-      const date = new Date(post.date).toDateString(); document.getElementById("post-date").innerText = date;
-
+      const formattedDate = new Date(post.date).toDateString();
+      
       // ✅ Main Post Data
       document.getElementById("post-title").innerText = post.title;
       document.getElementById("post-author").innerText = "By " + post.author;
