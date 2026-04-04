@@ -1,43 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
+function initSocialShare(post){
 
-  const pageUrl = window.location.href;
-  const pageTitle = document.title;
+  const url = window.location.href;
+  const title = encodeURIComponent(post.title);
 
-  document.querySelectorAll(".share-btn").forEach(btn => {
+  document.getElementById("share-facebook").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${url}`;
 
-    btn.addEventListener("click", () => {
+  document.getElementById("share-twitter").href =
+    `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
 
-      const platform = btn.getAttribute("data-platform");
-      let shareUrl = "";
+  document.getElementById("share-whatsapp").href =
+    `https://api.whatsapp.com/send?text=${title}%20${url}`;
 
-      switch(platform){
+  document.getElementById("share-linkedin").href =
+    `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
 
-        case "facebook":
-          shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`;
-          break;
+  // Copy Link
+  document.getElementById("share-copy").onclick = () => {
+    navigator.clipboard.writeText(url);
+    alert("Link copied!");
+  };
 
-        case "twitter":
-          shareUrl = `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`;
-          break;
-
-        case "whatsapp":
-          shareUrl = `https://api.whatsapp.com/send?text=${pageTitle} ${pageUrl}`;
-          break;
-
-        case "pinterest":
-          shareUrl = `https://pinterest.com/pin/create/button/?url=${pageUrl}`;
-          break;
-
-        case "copy":
-          navigator.clipboard.writeText(pageUrl)
-          .then(() => alert("Link copied!"))
-          .catch(() => alert("Copy failed"));
-          return;
-      }
-
-      window.open(shareUrl, "_blank");
-    });
-
-  });
-
-});
+}
