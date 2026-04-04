@@ -38,7 +38,8 @@
     #related-posts a:hover {
       transform: translateX(5px);
     }
-   .related {
-      border-bottom: 1px solid red ;
-      display: inline; background: #1877f2;
-   }
+   .related { border-bottom:2px solid black; margin-bottom: 20px;  }
+   .related p {  background-color: black; color: #ffffff;
+        margin: 0; padding: 5px 15px; display: inline-block; }
+
+
