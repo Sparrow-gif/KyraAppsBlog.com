@@ -67,6 +67,7 @@ h6 { font-size: var(--h6-size); }
 
 p { font-size: var(--p-size); }
 small { font-size: var(--small-size); }
+span { font-size: var(--small-size); }
 /*******************************************/
 header {
   padding:10px 16px; background:var(--header);
