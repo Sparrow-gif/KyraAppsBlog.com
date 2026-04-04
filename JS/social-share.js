@@ -29,8 +29,9 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
 
         case "copy":
-          navigator.clipboard.writeText(pageUrl);
-          alert("Link copied!");
+          navigator.clipboard.writeText(pageUrl)
+          .then(() => alert("Link copied!"))
+          .catch(() => alert("Copy failed"));
           return;
       }
 
