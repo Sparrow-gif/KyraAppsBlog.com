@@ -32,13 +32,15 @@
     "description": "Learn how revenue increased using HTML5 ads.",
     "image": "https://picsum.photos/600/400?1",
     "link": "post2.html",
-    "date": "2026-04-01"
+    "date": "2026-04-01",
+    "author": "QMath Team"
   },
   {
     "title": "Gaming Monetization",
     "description": "Best strategies for earning from games.",
     "image": "https://picsum.photos/600/400?2",
     "link": "blog/article1.html",
-    "date": "2026-04-01"
+    "date": "2026-04-01",
+    "author": "QMath Team"
   }
 ]
