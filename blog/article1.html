@@ -39,6 +39,9 @@
           <span id="post-date"></span>
         </div>
 
+        <!-- Dynamic Social Btns -->
+        <div id="social-share"></div>
+        
         <img id="post-image" class="img-fluid mb-4 rounded" loading="lazy">
 
         <!-- Optional Tags -->
@@ -66,6 +69,7 @@
   <div id="footer"></div>
 
   <!-- JS -->
+  <script src="../js/social-share.js"></script>
   <script>
 
   const currentPage = window.location.pathname.split("/").pop();
@@ -79,6 +83,11 @@
   fetch("../components/footer.html")
     .then(res => res.text())
     .then(data => document.getElementById("footer").innerHTML = data);
+
+  /* 🔥 Load Social Share */
+  fetch("../components/social-share.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("social-share").innerHTML = data);
 
   /* 🔥 Load Sidebar */
   fetch("../components/sidebar.html")
