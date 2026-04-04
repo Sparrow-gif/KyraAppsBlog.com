@@ -11,16 +11,10 @@
 /******************* social icons ***************************/
 
 .social-icons .share-btn {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-  transition: all 0.3s ease;
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; color: #fff; font-size: 14px;
+  text-decoration: none; transition: all 0.3s ease;
 }
 
 /* 🎯 nth-child colors */
@@ -32,7 +26,7 @@
 
 /* ✨ Hover Effects */
 .social-icons .share-btn:hover {
-  transform: translateY(-3px) scale(1.05);
+  transform: translateY(-3px) scale(0.95);
   opacity: 0.9;
 }
 
